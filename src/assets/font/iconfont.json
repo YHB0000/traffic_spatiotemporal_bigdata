@@ -1,0 +1,1150 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2959066",
+      "name": "热力图",
+      "font_class": "relitu",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "10885622",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "15391387",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "17510780",
+      "name": "anchor-fill",
+      "font_class": "anchor-fill",
+      "unicode": "e794",
+      "unicode_decimal": 59284
+    },
+    {
+      "icon_id": "17510781",
+      "name": "e-bike-2-line",
+      "font_class": "e-bike-2-line",
+      "unicode": "e795",
+      "unicode_decimal": 59285
+    },
+    {
+      "icon_id": "17510782",
+      "name": "barricade-fill",
+      "font_class": "barricade-fill",
+      "unicode": "e796",
+      "unicode_decimal": 59286
+    },
+    {
+      "icon_id": "17510783",
+      "name": "anchor-line",
+      "font_class": "anchor-line",
+      "unicode": "e797",
+      "unicode_decimal": 59287
+    },
+    {
+      "icon_id": "17510784",
+      "name": "e-bike-2-fill",
+      "font_class": "e-bike-2-fill",
+      "unicode": "e798",
+      "unicode_decimal": 59288
+    },
+    {
+      "icon_id": "17510785",
+      "name": "barricade-line",
+      "font_class": "barricade-line",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "17510786",
+      "name": "bus-2-fill",
+      "font_class": "bus-2-fill",
+      "unicode": "e79a",
+      "unicode_decimal": 59290
+    },
+    {
+      "icon_id": "17510787",
+      "name": "bus-2-line",
+      "font_class": "bus-2-line",
+      "unicode": "e79b",
+      "unicode_decimal": 59291
+    },
+    {
+      "icon_id": "17510788",
+      "name": "bike-fill",
+      "font_class": "bike-fill",
+      "unicode": "e79c",
+      "unicode_decimal": 59292
+    },
+    {
+      "icon_id": "17510789",
+      "name": "bus-fill",
+      "font_class": "bus-fill",
+      "unicode": "e79d",
+      "unicode_decimal": 59293
+    },
+    {
+      "icon_id": "17510790",
+      "name": "bus-line",
+      "font_class": "bus-line",
+      "unicode": "e79e",
+      "unicode_decimal": 59294
+    },
+    {
+      "icon_id": "17510791",
+      "name": "car-washing-fill",
+      "font_class": "car-washing-fill",
+      "unicode": "e79f",
+      "unicode_decimal": 59295
+    },
+    {
+      "icon_id": "17510792",
+      "name": "car-fill",
+      "font_class": "car-fill",
+      "unicode": "e7a0",
+      "unicode_decimal": 59296
+    },
+    {
+      "icon_id": "17510793",
+      "name": "car-line",
+      "font_class": "car-line",
+      "unicode": "e7a1",
+      "unicode_decimal": 59297
+    },
+    {
+      "icon_id": "17510794",
+      "name": "charging-pile-2-fill",
+      "font_class": "charging-pile-2-fill",
+      "unicode": "e7a2",
+      "unicode_decimal": 59298
+    },
+    {
+      "icon_id": "17510795",
+      "name": "caravan-fill",
+      "font_class": "caravan-fill",
+      "unicode": "e7a3",
+      "unicode_decimal": 59299
+    },
+    {
+      "icon_id": "17510796",
+      "name": "caravan-line",
+      "font_class": "caravan-line",
+      "unicode": "e7a4",
+      "unicode_decimal": 59300
+    },
+    {
+      "icon_id": "17510797",
+      "name": "bus-wifi-line",
+      "font_class": "bus-wifi-line",
+      "unicode": "e7a5",
+      "unicode_decimal": 59301
+    },
+    {
+      "icon_id": "17510798",
+      "name": "car-washing-line",
+      "font_class": "car-washing-line",
+      "unicode": "e7a6",
+      "unicode_decimal": 59302
+    },
+    {
+      "icon_id": "17510799",
+      "name": "charging-pile-2-line",
+      "font_class": "charging-pile-2-line",
+      "unicode": "e7a7",
+      "unicode_decimal": 59303
+    },
+    {
+      "icon_id": "17510800",
+      "name": "charging-pile-fill",
+      "font_class": "charging-pile-fill",
+      "unicode": "e7a8",
+      "unicode_decimal": 59304
+    },
+    {
+      "icon_id": "17510801",
+      "name": "bus-wifi-fill",
+      "font_class": "bus-wifi-fill",
+      "unicode": "e7a9",
+      "unicode_decimal": 59305
+    },
+    {
+      "icon_id": "17510802",
+      "name": "compass-2-line",
+      "font_class": "compass-2-line",
+      "unicode": "e7aa",
+      "unicode_decimal": 59306
+    },
+    {
+      "icon_id": "17510803",
+      "name": "compass-3-fill",
+      "font_class": "compass-3-fill",
+      "unicode": "e7ab",
+      "unicode_decimal": 59307
+    },
+    {
+      "icon_id": "17510804",
+      "name": "charging-pile-line",
+      "font_class": "charging-pile-line",
+      "unicode": "e7ac",
+      "unicode_decimal": 59308
+    },
+    {
+      "icon_id": "17510805",
+      "name": "compass-3-line",
+      "font_class": "compass-3-line",
+      "unicode": "e7ad",
+      "unicode_decimal": 59309
+    },
+    {
+      "icon_id": "17510806",
+      "name": "compass-fill",
+      "font_class": "compass-fill",
+      "unicode": "e7ae",
+      "unicode_decimal": 59310
+    },
+    {
+      "icon_id": "17510807",
+      "name": "compass-discover-fill",
+      "font_class": "compass-discover-fill",
+      "unicode": "e7af",
+      "unicode_decimal": 59311
+    },
+    {
+      "icon_id": "17510808",
+      "name": "compass-discover-line",
+      "font_class": "compass-discover-line",
+      "unicode": "e7b0",
+      "unicode_decimal": 59312
+    },
+    {
+      "icon_id": "17510809",
+      "name": "china-railway-fill",
+      "font_class": "china-railway-fill",
+      "unicode": "e7b1",
+      "unicode_decimal": 59313
+    },
+    {
+      "icon_id": "17510810",
+      "name": "china-railway-line",
+      "font_class": "china-railway-line",
+      "unicode": "e7b2",
+      "unicode_decimal": 59314
+    },
+    {
+      "icon_id": "17510811",
+      "name": "cup-fill",
+      "font_class": "cup-fill",
+      "unicode": "e7b3",
+      "unicode_decimal": 59315
+    },
+    {
+      "icon_id": "17510812",
+      "name": "compass-line",
+      "font_class": "compass-line",
+      "unicode": "e7b4",
+      "unicode_decimal": 59316
+    },
+    {
+      "icon_id": "17510813",
+      "name": "compass-2-fill",
+      "font_class": "compass-2-fill",
+      "unicode": "e7b5",
+      "unicode_decimal": 59317
+    },
+    {
+      "icon_id": "17510814",
+      "name": "direction-line",
+      "font_class": "direction-line",
+      "unicode": "e7b6",
+      "unicode_decimal": 59318
+    },
+    {
+      "icon_id": "17510815",
+      "name": "flight-takeoff-line",
+      "font_class": "flight-takeoff-line",
+      "unicode": "e7b7",
+      "unicode_decimal": 59319
+    },
+    {
+      "icon_id": "17510816",
+      "name": "flight-land-fill",
+      "font_class": "flight-land-fill",
+      "unicode": "e7b8",
+      "unicode_decimal": 59320
+    },
+    {
+      "icon_id": "17510817",
+      "name": "flight-takeoff-fill",
+      "font_class": "flight-takeoff-fill",
+      "unicode": "e7b9",
+      "unicode_decimal": 59321
+    },
+    {
+      "icon_id": "17510818",
+      "name": "footprint-fill",
+      "font_class": "footprint-fill",
+      "unicode": "e7ba",
+      "unicode_decimal": 59322
+    },
+    {
+      "icon_id": "17510819",
+      "name": "earth-line",
+      "font_class": "earth-line",
+      "unicode": "e7bb",
+      "unicode_decimal": 59323
+    },
+    {
+      "icon_id": "17510820",
+      "name": "earth-fill",
+      "font_class": "earth-fill",
+      "unicode": "e7bc",
+      "unicode_decimal": 59324
+    },
+    {
+      "icon_id": "17510821",
+      "name": "cup-line",
+      "font_class": "cup-line",
+      "unicode": "e7bd",
+      "unicode_decimal": 59325
+    },
+    {
+      "icon_id": "17510822",
+      "name": "globe-fill",
+      "font_class": "globe-fill",
+      "unicode": "e7be",
+      "unicode_decimal": 59326
+    },
+    {
+      "icon_id": "17510823",
+      "name": "direction-fill",
+      "font_class": "direction-fill",
+      "unicode": "e7bf",
+      "unicode_decimal": 59327
+    },
+    {
+      "icon_id": "17510824",
+      "name": "guide-line",
+      "font_class": "guide-line",
+      "unicode": "e7c0",
+      "unicode_decimal": 59328
+    },
+    {
+      "icon_id": "17510825",
+      "name": "goblet-fill",
+      "font_class": "goblet-fill",
+      "unicode": "e7c1",
+      "unicode_decimal": 59329
+    },
+    {
+      "icon_id": "17510826",
+      "name": "hotel-bed-fill",
+      "font_class": "hotel-bed-fill",
+      "unicode": "e7c2",
+      "unicode_decimal": 59330
+    },
+    {
+      "icon_id": "17510827",
+      "name": "goblet-line",
+      "font_class": "goblet-line",
+      "unicode": "e7c3",
+      "unicode_decimal": 59331
+    },
+    {
+      "icon_id": "17510828",
+      "name": "gas-station-fill",
+      "font_class": "gas-station-fill",
+      "unicode": "e7c4",
+      "unicode_decimal": 59332
+    },
+    {
+      "icon_id": "17510829",
+      "name": "lifebuoy-fill",
+      "font_class": "lifebuoy-fill",
+      "unicode": "e7c5",
+      "unicode_decimal": 59333
+    },
+    {
+      "icon_id": "17510830",
+      "name": "guide-fill",
+      "font_class": "guide-fill",
+      "unicode": "e7c6",
+      "unicode_decimal": 59334
+    },
+    {
+      "icon_id": "17510831",
+      "name": "gas-station-line",
+      "font_class": "gas-station-line",
+      "unicode": "e7c7",
+      "unicode_decimal": 59335
+    },
+    {
+      "icon_id": "17510832",
+      "name": "hotel-bed-line",
+      "font_class": "hotel-bed-line",
+      "unicode": "e7c8",
+      "unicode_decimal": 59336
+    },
+    {
+      "icon_id": "17510833",
+      "name": "flight-land-line",
+      "font_class": "flight-land-line",
+      "unicode": "e7c9",
+      "unicode_decimal": 59337
+    },
+    {
+      "icon_id": "17510834",
+      "name": "globe-line",
+      "font_class": "globe-line",
+      "unicode": "e7ca",
+      "unicode_decimal": 59338
+    },
+    {
+      "icon_id": "17510835",
+      "name": "footprint-line",
+      "font_class": "footprint-line",
+      "unicode": "e7cb",
+      "unicode_decimal": 59339
+    },
+    {
+      "icon_id": "17510836",
+      "name": "luggage-cart-fill",
+      "font_class": "luggage-cart-fill",
+      "unicode": "e7cc",
+      "unicode_decimal": 59340
+    },
+    {
+      "icon_id": "17510837",
+      "name": "lifebuoy-line",
+      "font_class": "lifebuoy-line",
+      "unicode": "e7cd",
+      "unicode_decimal": 59341
+    },
+    {
+      "icon_id": "17510838",
+      "name": "map-fill",
+      "font_class": "map-fill",
+      "unicode": "e7ce",
+      "unicode_decimal": 59342
+    },
+    {
+      "icon_id": "17510839",
+      "name": "map-pin-4-fill",
+      "font_class": "map-pin-4-fill",
+      "unicode": "e7cf",
+      "unicode_decimal": 59343
+    },
+    {
+      "icon_id": "17510840",
+      "name": "luggage-deposit-line",
+      "font_class": "luggage-deposit-line",
+      "unicode": "e7d0",
+      "unicode_decimal": 59344
+    },
+    {
+      "icon_id": "17510841",
+      "name": "map-pin-3-fill",
+      "font_class": "map-pin-3-fill",
+      "unicode": "e7d1",
+      "unicode_decimal": 59345
+    },
+    {
+      "icon_id": "17510842",
+      "name": "map-line",
+      "font_class": "map-line",
+      "unicode": "e7d2",
+      "unicode_decimal": 59346
+    },
+    {
+      "icon_id": "17510843",
+      "name": "map-pin-2-fill",
+      "font_class": "map-pin-2-fill",
+      "unicode": "e7d3",
+      "unicode_decimal": 59347
+    },
+    {
+      "icon_id": "17510844",
+      "name": "map-2-fill",
+      "font_class": "map-2-fill",
+      "unicode": "e7d4",
+      "unicode_decimal": 59348
+    },
+    {
+      "icon_id": "17510845",
+      "name": "luggage-deposit-fill",
+      "font_class": "luggage-deposit-fill",
+      "unicode": "e7d5",
+      "unicode_decimal": 59349
+    },
+    {
+      "icon_id": "17510846",
+      "name": "luggage-cart-line",
+      "font_class": "luggage-cart-line",
+      "unicode": "e7d6",
+      "unicode_decimal": 59350
+    },
+    {
+      "icon_id": "17510847",
+      "name": "map-pin-4-line",
+      "font_class": "map-pin-4-line",
+      "unicode": "e7d7",
+      "unicode_decimal": 59351
+    },
+    {
+      "icon_id": "17510848",
+      "name": "map-pin-3-line",
+      "font_class": "map-pin-3-line",
+      "unicode": "e7d8",
+      "unicode_decimal": 59352
+    },
+    {
+      "icon_id": "17510849",
+      "name": "map-2-line",
+      "font_class": "map-2-line",
+      "unicode": "e7d9",
+      "unicode_decimal": 59353
+    },
+    {
+      "icon_id": "17510850",
+      "name": "map-pin-5-line",
+      "font_class": "map-pin-5-line",
+      "unicode": "e7da",
+      "unicode_decimal": 59354
+    },
+    {
+      "icon_id": "17510851",
+      "name": "map-pin-2-line",
+      "font_class": "map-pin-2-line",
+      "unicode": "e7db",
+      "unicode_decimal": 59355
+    },
+    {
+      "icon_id": "17510852",
+      "name": "map-pin-5-fill",
+      "font_class": "map-pin-5-fill",
+      "unicode": "e7dc",
+      "unicode_decimal": 59356
+    },
+    {
+      "icon_id": "17510853",
+      "name": "map-pin-time-line",
+      "font_class": "map-pin-time-line",
+      "unicode": "e7dd",
+      "unicode_decimal": 59357
+    },
+    {
+      "icon_id": "17510854",
+      "name": "map-pin-range-line",
+      "font_class": "map-pin-range-line",
+      "unicode": "e7de",
+      "unicode_decimal": 59358
+    },
+    {
+      "icon_id": "17510855",
+      "name": "map-pin-line",
+      "font_class": "map-pin-line",
+      "unicode": "e7df",
+      "unicode_decimal": 59359
+    },
+    {
+      "icon_id": "17510856",
+      "name": "map-pin-range-fill",
+      "font_class": "map-pin-range-fill",
+      "unicode": "e7e0",
+      "unicode_decimal": 59360
+    },
+    {
+      "icon_id": "17510857",
+      "name": "map-pin-fill",
+      "font_class": "map-pin-fill",
+      "unicode": "e7e1",
+      "unicode_decimal": 59361
+    },
+    {
+      "icon_id": "17510858",
+      "name": "map-pin-user-fill",
+      "font_class": "map-pin-user-fill",
+      "unicode": "e7e2",
+      "unicode_decimal": 59362
+    },
+    {
+      "icon_id": "17510859",
+      "name": "navigation-fill",
+      "font_class": "navigation-fill",
+      "unicode": "e7e3",
+      "unicode_decimal": 59363
+    },
+    {
+      "icon_id": "17510860",
+      "name": "motorbike-line",
+      "font_class": "motorbike-line",
+      "unicode": "e7e4",
+      "unicode_decimal": 59364
+    },
+    {
+      "icon_id": "17510861",
+      "name": "oil-fill",
+      "font_class": "oil-fill",
+      "unicode": "e7e5",
+      "unicode_decimal": 59365
+    },
+    {
+      "icon_id": "17510862",
+      "name": "pin-distance-fill",
+      "font_class": "pin-distance-fill",
+      "unicode": "e7e6",
+      "unicode_decimal": 59366
+    },
+    {
+      "icon_id": "17510863",
+      "name": "parking-fill",
+      "font_class": "parking-fill",
+      "unicode": "e7e7",
+      "unicode_decimal": 59367
+    },
+    {
+      "icon_id": "17510864",
+      "name": "oil-line",
+      "font_class": "oil-line",
+      "unicode": "e7e8",
+      "unicode_decimal": 59368
+    },
+    {
+      "icon_id": "17510865",
+      "name": "plane-fill",
+      "font_class": "plane-fill",
+      "unicode": "e7e9",
+      "unicode_decimal": 59369
+    },
+    {
+      "icon_id": "17510866",
+      "name": "parking-line",
+      "font_class": "parking-line",
+      "unicode": "e7ea",
+      "unicode_decimal": 59370
+    },
+    {
+      "icon_id": "17510867",
+      "name": "parking-box-line",
+      "font_class": "parking-box-line",
+      "unicode": "e7eb",
+      "unicode_decimal": 59371
+    },
+    {
+      "icon_id": "17510868",
+      "name": "pin-distance-line",
+      "font_class": "pin-distance-line",
+      "unicode": "e7ec",
+      "unicode_decimal": 59372
+    },
+    {
+      "icon_id": "17510869",
+      "name": "passport-line",
+      "font_class": "passport-line",
+      "unicode": "e7ed",
+      "unicode_decimal": 59373
+    },
+    {
+      "icon_id": "17510870",
+      "name": "map-pin-time-fill",
+      "font_class": "map-pin-time-fill",
+      "unicode": "e7ee",
+      "unicode_decimal": 59374
+    },
+    {
+      "icon_id": "17510871",
+      "name": "map-pin-user-line",
+      "font_class": "map-pin-user-line",
+      "unicode": "e7ef",
+      "unicode_decimal": 59375
+    },
+    {
+      "icon_id": "17510872",
+      "name": "map-pin-add-fill",
+      "font_class": "map-pin-add-fill",
+      "unicode": "e7f0",
+      "unicode_decimal": 59376
+    },
+    {
+      "icon_id": "17510873",
+      "name": "police-car-fill",
+      "font_class": "police-car-fill",
+      "unicode": "e7f1",
+      "unicode_decimal": 59377
+    },
+    {
+      "icon_id": "17510874",
+      "name": "police-car-line",
+      "font_class": "police-car-line",
+      "unicode": "e7f2",
+      "unicode_decimal": 59378
+    },
+    {
+      "icon_id": "17510875",
+      "name": "navigation-line",
+      "font_class": "navigation-line",
+      "unicode": "e7f3",
+      "unicode_decimal": 59379
+    },
+    {
+      "icon_id": "17510876",
+      "name": "passport-fill",
+      "font_class": "passport-fill",
+      "unicode": "e7f4",
+      "unicode_decimal": 59380
+    },
+    {
+      "icon_id": "17510877",
+      "name": "map-pin-add-line",
+      "font_class": "map-pin-add-line",
+      "unicode": "e7f5",
+      "unicode_decimal": 59381
+    },
+    {
+      "icon_id": "17510878",
+      "name": "parking-box-fill",
+      "font_class": "parking-box-fill",
+      "unicode": "e7f6",
+      "unicode_decimal": 59382
+    },
+    {
+      "icon_id": "17510879",
+      "name": "plane-line",
+      "font_class": "plane-line",
+      "unicode": "e7f7",
+      "unicode_decimal": 59383
+    },
+    {
+      "icon_id": "17510880",
+      "name": "restaurant-line",
+      "font_class": "restaurant-line",
+      "unicode": "e7f8",
+      "unicode_decimal": 59384
+    },
+    {
+      "icon_id": "17510881",
+      "name": "pushpin-fill",
+      "font_class": "pushpin-fill",
+      "unicode": "e7f9",
+      "unicode_decimal": 59385
+    },
+    {
+      "icon_id": "17510882",
+      "name": "restaurant-fill",
+      "font_class": "restaurant-fill",
+      "unicode": "e7fa",
+      "unicode_decimal": 59386
+    },
+    {
+      "icon_id": "17510883",
+      "name": "pushpin-2-fill",
+      "font_class": "pushpin-2-fill",
+      "unicode": "e7fb",
+      "unicode_decimal": 59387
+    },
+    {
+      "icon_id": "17510884",
+      "name": "motorbike-fill",
+      "font_class": "motorbike-fill",
+      "unicode": "e7fc",
+      "unicode_decimal": 59388
+    },
+    {
+      "icon_id": "17510885",
+      "name": "pushpin-line",
+      "font_class": "pushpin-line",
+      "unicode": "e7fd",
+      "unicode_decimal": 59389
+    },
+    {
+      "icon_id": "17510886",
+      "name": "restaurant-2-fill",
+      "font_class": "restaurant-2-fill",
+      "unicode": "e7fe",
+      "unicode_decimal": 59390
+    },
+    {
+      "icon_id": "17510887",
+      "name": "riding-fill",
+      "font_class": "riding-fill",
+      "unicode": "e7ff",
+      "unicode_decimal": 59391
+    },
+    {
+      "icon_id": "17510888",
+      "name": "restaurant-2-line",
+      "font_class": "restaurant-2-line",
+      "unicode": "e800",
+      "unicode_decimal": 59392
+    },
+    {
+      "icon_id": "17510889",
+      "name": "road-map-fill",
+      "font_class": "road-map-fill",
+      "unicode": "e801",
+      "unicode_decimal": 59393
+    },
+    {
+      "icon_id": "17510890",
+      "name": "riding-line",
+      "font_class": "riding-line",
+      "unicode": "e802",
+      "unicode_decimal": 59394
+    },
+    {
+      "icon_id": "17510891",
+      "name": "road-map-line",
+      "font_class": "road-map-line",
+      "unicode": "e803",
+      "unicode_decimal": 59395
+    },
+    {
+      "icon_id": "17510892",
+      "name": "pushpin-2-line",
+      "font_class": "pushpin-2-line",
+      "unicode": "e804",
+      "unicode_decimal": 59396
+    },
+    {
+      "icon_id": "17510893",
+      "name": "roadster-fill",
+      "font_class": "roadster-fill",
+      "unicode": "e805",
+      "unicode_decimal": 59397
+    },
+    {
+      "icon_id": "17510894",
+      "name": "route-fill",
+      "font_class": "route-fill",
+      "unicode": "e806",
+      "unicode_decimal": 59398
+    },
+    {
+      "icon_id": "17510895",
+      "name": "route-line",
+      "font_class": "route-line",
+      "unicode": "e807",
+      "unicode_decimal": 59399
+    },
+    {
+      "icon_id": "17510896",
+      "name": "rocket-2-line",
+      "font_class": "rocket-2-line",
+      "unicode": "e808",
+      "unicode_decimal": 59400
+    },
+    {
+      "icon_id": "17510897",
+      "name": "rocket-2-fill",
+      "font_class": "rocket-2-fill",
+      "unicode": "e809",
+      "unicode_decimal": 59401
+    },
+    {
+      "icon_id": "17510898",
+      "name": "run-line",
+      "font_class": "run-line",
+      "unicode": "e80a",
+      "unicode_decimal": 59402
+    },
+    {
+      "icon_id": "17510899",
+      "name": "rocket-fill",
+      "font_class": "rocket-fill",
+      "unicode": "e80b",
+      "unicode_decimal": 59403
+    },
+    {
+      "icon_id": "17510900",
+      "name": "bike-line",
+      "font_class": "bike-line",
+      "unicode": "e80c",
+      "unicode_decimal": 59404
+    },
+    {
+      "icon_id": "17510901",
+      "name": "sailboat-line",
+      "font_class": "sailboat-line",
+      "unicode": "e80d",
+      "unicode_decimal": 59405
+    },
+    {
+      "icon_id": "17510902",
+      "name": "sailboat-fill",
+      "font_class": "sailboat-fill",
+      "unicode": "e80e",
+      "unicode_decimal": 59406
+    },
+    {
+      "icon_id": "17510903",
+      "name": "ship-2-fill",
+      "font_class": "ship-2-fill",
+      "unicode": "e80f",
+      "unicode_decimal": 59407
+    },
+    {
+      "icon_id": "17510904",
+      "name": "run-fill",
+      "font_class": "run-fill",
+      "unicode": "e810",
+      "unicode_decimal": 59408
+    },
+    {
+      "icon_id": "17510905",
+      "name": "rocket-line",
+      "font_class": "rocket-line",
+      "unicode": "e811",
+      "unicode_decimal": 59409
+    },
+    {
+      "icon_id": "17510906",
+      "name": "roadster-line",
+      "font_class": "roadster-line",
+      "unicode": "e812",
+      "unicode_decimal": 59410
+    },
+    {
+      "icon_id": "17510907",
+      "name": "space-ship-fill",
+      "font_class": "space-ship-fill",
+      "unicode": "e813",
+      "unicode_decimal": 59411
+    },
+    {
+      "icon_id": "17510908",
+      "name": "steering-2-fill",
+      "font_class": "steering-2-fill",
+      "unicode": "e814",
+      "unicode_decimal": 59412
+    },
+    {
+      "icon_id": "17510909",
+      "name": "ship-line",
+      "font_class": "ship-line",
+      "unicode": "e815",
+      "unicode_decimal": 59413
+    },
+    {
+      "icon_id": "17510910",
+      "name": "signal-tower-fill",
+      "font_class": "signal-tower-fill",
+      "unicode": "e816",
+      "unicode_decimal": 59414
+    },
+    {
+      "icon_id": "17510911",
+      "name": "signal-tower-line",
+      "font_class": "signal-tower-line",
+      "unicode": "e817",
+      "unicode_decimal": 59415
+    },
+    {
+      "icon_id": "17510912",
+      "name": "ship-fill",
+      "font_class": "ship-fill",
+      "unicode": "e818",
+      "unicode_decimal": 59416
+    },
+    {
+      "icon_id": "17510913",
+      "name": "space-ship-line",
+      "font_class": "space-ship-line",
+      "unicode": "e819",
+      "unicode_decimal": 59417
+    },
+    {
+      "icon_id": "17510914",
+      "name": "steering-line",
+      "font_class": "steering-line",
+      "unicode": "e81a",
+      "unicode_decimal": 59418
+    },
+    {
+      "icon_id": "17510915",
+      "name": "steering-2-line",
+      "font_class": "steering-2-line",
+      "unicode": "e81b",
+      "unicode_decimal": 59419
+    },
+    {
+      "icon_id": "17510916",
+      "name": "subway-line",
+      "font_class": "subway-line",
+      "unicode": "e81c",
+      "unicode_decimal": 59420
+    },
+    {
+      "icon_id": "17510917",
+      "name": "steering-fill",
+      "font_class": "steering-fill",
+      "unicode": "e81d",
+      "unicode_decimal": 59421
+    },
+    {
+      "icon_id": "17510918",
+      "name": "subway-fill",
+      "font_class": "subway-fill",
+      "unicode": "e81e",
+      "unicode_decimal": 59422
+    },
+    {
+      "icon_id": "17510919",
+      "name": "ship-2-line",
+      "font_class": "ship-2-line",
+      "unicode": "e81f",
+      "unicode_decimal": 59423
+    },
+    {
+      "icon_id": "17510920",
+      "name": "suitcase-fill",
+      "font_class": "suitcase-fill",
+      "unicode": "e820",
+      "unicode_decimal": 59424
+    },
+    {
+      "icon_id": "17510921",
+      "name": "suitcase-2-fill",
+      "font_class": "suitcase-2-fill",
+      "unicode": "e821",
+      "unicode_decimal": 59425
+    },
+    {
+      "icon_id": "17510922",
+      "name": "suitcase-line",
+      "font_class": "suitcase-line",
+      "unicode": "e822",
+      "unicode_decimal": 59426
+    },
+    {
+      "icon_id": "17510923",
+      "name": "suitcase-3-fill",
+      "font_class": "suitcase-3-fill",
+      "unicode": "e823",
+      "unicode_decimal": 59427
+    },
+    {
+      "icon_id": "17510924",
+      "name": "suitcase-2-line",
+      "font_class": "suitcase-2-line",
+      "unicode": "e824",
+      "unicode_decimal": 59428
+    },
+    {
+      "icon_id": "17510925",
+      "name": "taxi-fill",
+      "font_class": "taxi-fill",
+      "unicode": "e825",
+      "unicode_decimal": 59429
+    },
+    {
+      "icon_id": "17510926",
+      "name": "suitcase-3-line",
+      "font_class": "suitcase-3-line",
+      "unicode": "e826",
+      "unicode_decimal": 59430
+    },
+    {
+      "icon_id": "17510927",
+      "name": "taxi-line",
+      "font_class": "taxi-line",
+      "unicode": "e827",
+      "unicode_decimal": 59431
+    },
+    {
+      "icon_id": "17510928",
+      "name": "taxi-wifi-fill",
+      "font_class": "taxi-wifi-fill",
+      "unicode": "e828",
+      "unicode_decimal": 59432
+    },
+    {
+      "icon_id": "17510929",
+      "name": "traffic-light-line",
+      "font_class": "traffic-light-line",
+      "unicode": "e829",
+      "unicode_decimal": 59433
+    },
+    {
+      "icon_id": "17510930",
+      "name": "traffic-light-fill",
+      "font_class": "traffic-light-fill",
+      "unicode": "e82a",
+      "unicode_decimal": 59434
+    },
+    {
+      "icon_id": "17510931",
+      "name": "treasure-map-fill",
+      "font_class": "treasure-map-fill",
+      "unicode": "e82b",
+      "unicode_decimal": 59435
+    },
+    {
+      "icon_id": "17510932",
+      "name": "truck-fill",
+      "font_class": "truck-fill",
+      "unicode": "e82c",
+      "unicode_decimal": 59436
+    },
+    {
+      "icon_id": "17510933",
+      "name": "taxi-wifi-line",
+      "font_class": "taxi-wifi-line",
+      "unicode": "e82d",
+      "unicode_decimal": 59437
+    },
+    {
+      "icon_id": "17510934",
+      "name": "truck-line",
+      "font_class": "truck-line",
+      "unicode": "e82e",
+      "unicode_decimal": 59438
+    },
+    {
+      "icon_id": "17510935",
+      "name": "walk-fill",
+      "font_class": "walk-fill",
+      "unicode": "e82f",
+      "unicode_decimal": 59439
+    },
+    {
+      "icon_id": "17510936",
+      "name": "train-wifi-fill",
+      "font_class": "train-wifi-fill",
+      "unicode": "e830",
+      "unicode_decimal": 59440
+    },
+    {
+      "icon_id": "17510937",
+      "name": "train-wifi-line",
+      "font_class": "train-wifi-line",
+      "unicode": "e831",
+      "unicode_decimal": 59441
+    },
+    {
+      "icon_id": "17510938",
+      "name": "walk-line",
+      "font_class": "walk-line",
+      "unicode": "e832",
+      "unicode_decimal": 59442
+    },
+    {
+      "icon_id": "17510939",
+      "name": "treasure-map-line",
+      "font_class": "treasure-map-line",
+      "unicode": "e833",
+      "unicode_decimal": 59443
+    }
+  ]
+}
