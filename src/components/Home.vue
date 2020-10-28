@@ -73,7 +73,7 @@ export default {
         {
           id: 120,
           authName: '出行分析',
-          path: '/trip',
+          path: 'trip',
           children: [{
             id: 121,
             authName: '出行方式',

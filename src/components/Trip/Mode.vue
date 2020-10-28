@@ -7,6 +7,11 @@
 export default {
   data () {
     return {
+      walkdata: '',
+      // walkdata: this.$http.post('mode/walk'),
+      // bikedata: this.$http.post('mode/bike'),
+      // busdata: this.$http.post('mode/bus'),
+      // cardata: this.$http.post('mode/car'),
       myChart: {},
       option: {
         legend: {},
@@ -16,8 +21,9 @@ export default {
         },
         dataset: {
           source: [
-            ['product', '09.01', '09.02', '09.03', '09.03', '09.04', '09.05'],
-            ['步行', 41.1, 30.4, 65.1, 53.3, 83.8, 98.7],
+            // ['product', '09.01', '09.02', '09.03', '09.04', '09.05', '09.06'],
+            ['product', '09.01', '09.02', '09.03'],
+            ['步行', 46.5, 12.1, 25.7, 33.1, 83.4, 25.1],
             ['自行车', 86.5, 92.1, 85.7, 83.1, 73.4, 55.1],
             ['公交车', 24.1, 67.2, 79.5, 86.4, 65.2, 82.5],
             ['自驾车', 55.2, 67.1, 69.2, 72.4, 53.9, 39.1]
@@ -29,7 +35,7 @@ export default {
         },
         yAxis: {
           gridIndex: 0,
-          name: '距离（公里）'
+          name: '数量（个）'
         },
         grid: { top: '55%' },
         series: [
@@ -57,6 +63,7 @@ export default {
   },
   mounted () {
     this.myChart = echarts.init(this.$refs.mode)
+    this.getdata()
     this.myChart.setOption(this.option)
     this.linkcharts()
   },
@@ -80,6 +87,10 @@ export default {
           })
         }
       })
+    },
+    async getdata () {
+      const { data } = await this.$http.post('/mode/walk')
+      console.log(data)
     }
   }
 }

@@ -20,14 +20,15 @@
       <el-row>
         <el-col :span="24">
           <div class="block">
-            <el-date-picker v-model="value" type="datetimerange" :picker-options="pickerOptions" range-separator="—" start-placeholder="开始日期" end-placeholder="结束日期" align="right" format="yyyy-MM-dd HH:mm">
+            <el-date-picker v-model="value" type="datetimerange" :picker-options="pickerOptions" range-separator="—" start-placeholder="开始日期" end-placeholder="结束日期" align="center" format="yyyy-MM-dd HH:mm"
+              value-format="timestamp" :default-value="[new Date(2018, 10, 3, 0, 0), new Date(2018, 10, 3, 0, 0)]">
             </el-date-picker>
           </div>
         </el-col>
       </el-row>
       <el-row>
         <el-col :span="2" :offset='5'>
-          <el-button type="primary" icon="el-icon-search" size='small'>搜索</el-button>
+          <el-button type="primary" icon="el-icon-search" size='small' @click="setdata">搜索</el-button>
         </el-col>
         <el-col :span="2" :offset='7'>
           <el-button type="primary" icon="el-icon-refresh-left" size='small' native-type="reset" @click="clear">重置</el-button>
@@ -69,11 +70,14 @@ export default {
           }
         }]
       },
-      value: '',
+      value: [new Date(2018, 10, 3, 0, 0), new Date(2018, 10, 3, 0, 0)],
       place: '',
       map: {},
+      layer: {},
       auto: {},
-      placeSearch: {}
+      placeSearch: {},
+      data: [],
+      time: []
     }
   },
   mounted () {
@@ -81,7 +85,8 @@ export default {
     this.search()
   },
   methods: {
-    heatshow () {
+    // 配置基本热力图属性
+    async heatshow () {
       // =============== 创建底图 ===============
       this.map = new AMap.Map('heatmap', {
         mapStyle: 'amap://styles/grey',
@@ -90,34 +95,14 @@ export default {
       })
 
       // =============== 创建图层 ===============
-      // 从 v1.3.0 版起，每个图层只描述一种展现形式的可视化类型，并且所有图层的都在 Loca 这个命名空间下。
-      const layer = new Loca.HeatmapLayer({
+      this.layer = new Loca.HeatmapLayer({
         map: this.map,
         // 设置缩放和中心自适应
         fitView: true
       })
 
-      // =============== 设置数据 ===============
-      const data = [
-        { lnglat: [116.366794, 39.915309], count: 10 },
-        { lnglat: [116.486409, 39.921489], count: 15 },
-        { lnglat: [116.286968, 39.863642], count: 30 },
-        { lnglat: [116.386794, 39.915809], count: 10 },
-        { lnglat: [116.486409, 39.928489], count: 15 },
-        { lnglat: [116.283968, 39.883642], count: 10 },
-        { lnglat: [116.306794, 39.915389], count: 10 },
-        { lnglat: [116.486409, 39.951409], count: 15 },
-        { lnglat: [116.289968, 39.963642], count: 20 }
-      ]
-
-      layer.setData(data, {
-        type: 'json',
-        lnglat: 'lnglat',
-        value: 'count'
-      })
-
       // =============== 样式配置 ===============
-      layer.setOptions({
+      this.layer.setOptions({
         style: {
           // 热力半径，单位：像素
           radius: 30,
@@ -132,10 +117,8 @@ export default {
           }
         }
       })
-
-      // =============== 渲染 ===============
-      layer.render()
     },
+    // 关键字检索地址 设立地址中心
     search () {
       // =============== 检索配置 ===============
       this.auto = new AMap.Autocomplete({
@@ -151,6 +134,23 @@ export default {
         this.placeSearch.search(e.poi.name) // 关键字查询查询
       }) // 注册监听，当选中某条记录时会触发
     },
+    // 获取数据 渲染历史热力
+    async setdata () {
+      // console.log(this.value[0], this.value[1])
+      this.time = await this.$http.post(`history/${this.value}`)
+      // =============== 设置数据 ===============
+      const { data } = await this.$http.post('history')
+
+      this.layer.setData(data, {
+        type: 'json',
+        lnglat: 'lnglat',
+        value: 'count'
+      })
+
+      // =============== 渲染 ===============
+      this.layer.render()
+    },
+    // 清除所有数据信息
     clear () {
       this.value = ''
       this.place = ''

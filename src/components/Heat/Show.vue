@@ -19,6 +19,16 @@
         <div class="input-item-prepend"><span class="input-item-text">街道</span></div>
         <select style="width:100px" @change='setCenter($refs.str)' ref="str"></select>
       </div>
+      <div class="input-item">
+        <el-row style="width:250px">
+          <el-col :span="2" :offset="5">
+            <el-button type="primary" size="mini" @click="setdata">确认</el-button>
+          </el-col>
+          <el-col :span="2" :offset="6">
+            <el-button type="primary" size="mini" @click="clear">重置</el-button>
+          </el-col>
+        </el-row>
+      </div>
     </div>
   </div>
 </template>
@@ -29,22 +39,22 @@ export default {
   data () {
     return {
       map: {},
+      layer: {},
       opts: {
         subdistrict: 1,
         showbiz: false
       },
       district: new AMap.DistrictSearch(this.opts),
       polygons: [],
-      // citycode: '',
       option: {},
       keyword: {},
       adcode: {},
       contentSub: {},
       curlevel: '',
-      curList: {}
+      curList: {},
+      data: [],
+      clock: {}
     }
-  },
-  beforeCreate () {
   },
   mounted () {
     this.heatshow()
@@ -53,6 +63,7 @@ export default {
   beforeMount () {
   },
   methods: {
+    // 初始化 搜索的一级地址
     searchplace () {
       var self = this
       this.district.search('中国', function (status, result) {
@@ -61,9 +72,12 @@ export default {
         }
       })
     },
+    // 设立地址中心
     setCenter (obj) {
       this.map.setCenter(obj[obj.options.selectedIndex].center)
+      this.map.setZoom(15)
     },
+    // 获取地址数据 绘制地址范围
     getData (data, level) {
       var self = this
       var bounds = data.boundaries
@@ -82,6 +96,7 @@ export default {
         this.map.setFitView()
       }
 
+      // 清除选择框信息
       if (level === 'province') {
         this.$refs.cit.innerHTML = ''
         this.$refs.dis.innerHTML = ''
@@ -93,6 +108,7 @@ export default {
         this.$refs.str.innerHTML = ''
       }
 
+      // 添加选择框信息
       var citycode
       var subList = data.districtList
       if (subList) {
@@ -110,6 +126,7 @@ export default {
             break
           case 'street':
             this.curList = this.$refs.str
+            this.map.setZoom(12)
             break
         }
         this.curList.add(this.contentSub)
@@ -125,6 +142,7 @@ export default {
         }
       }
     },
+    // 搜索地址 获取地址信息
     search (obj) {
       var self = this
       for (var i = 0, l = this.polygons.length; i < l; i++) {
@@ -143,43 +161,26 @@ export default {
         }
       })
     },
-    heatshow () {
+    // 配置基本热力图属性
+    async heatshow () {
       // =============== 创建底图 ===============
       this.map = new AMap.Map('heatmap', {
         resizeEnable: true,
         mapStyle: 'amap://styles/grey',
         zoom: 3,
-        center: [116.366794, 39.915309]
+        center: [122.8896332, 41.51470947]
       })
+
       // =============== 创建图层 ===============
       // 从 v1.3.0 版起，每个图层只描述一种展现形式的可视化类型，并且所有图层的都在 Loca 这个命名空间下。
-      const layer = new Loca.HeatmapLayer({
+      this.layer = new Loca.HeatmapLayer({
         map: this.map,
         // 设置缩放和中心自适应
-        fitView: true
-      })
-
-      // =============== 设置数据 ===============
-      const data = [
-        { lnglat: [116.366794, 39.915309], count: 10 },
-        { lnglat: [116.486409, 39.921489], count: 15 },
-        { lnglat: [116.286968, 39.863642], count: 30 },
-        { lnglat: [116.386794, 39.915809], count: 10 },
-        { lnglat: [116.486409, 39.928489], count: 15 },
-        { lnglat: [116.283968, 39.883642], count: 10 },
-        { lnglat: [116.306794, 39.915389], count: 10 },
-        { lnglat: [116.486409, 39.951409], count: 15 },
-        { lnglat: [116.289968, 39.963642], count: 20 }
-      ]
-
-      layer.setData(data, {
-        type: 'json',
-        lnglat: 'lnglat',
-        value: 'count'
+        fitView: false
       })
 
       // =============== 样式配置 ===============
-      layer.setOptions({
+      this.layer.setOptions({
         style: {
           // 热力半径，单位：像素
           radius: 30,
@@ -194,9 +195,35 @@ export default {
           }
         }
       })
+    },
+    // 获取热力图数据 创建定时器
+    setdata () {
+      this.$http.get('heatdata')
+      this.clock = setInterval(async () => {
+        // =============== 设置数据 ===============
+        const { data } = await this.$http.post('heat')
+        console.log(data)
 
-      // =============== 渲染 ===============
-      layer.render()
+        this.layer.setData(data, {
+          type: 'json',
+          lnglat: 'lnglat',
+          value: 'count'
+        })
+
+        // =============== 渲染 ===============
+        this.layer.render()
+      }, 1500)
+    },
+    // 清楚所有数据 销毁定时器
+    clear () {
+      this.$refs.pro.innerHTML = ''
+      this.$refs.cit.innerHTML = ''
+      this.$refs.dis.innerHTML = ''
+      this.$refs.str.innerHTML = ''
+      // this.searchplace()
+      // this.map.setFitView()
+      this.data = []
+      window.clearInterval(this.clock)
     }
   }
 }

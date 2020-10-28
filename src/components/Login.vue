@@ -56,23 +56,21 @@ export default {
     },
     // 登录验证
     Login () {
-      // this.$refs.loginFormRef.validate(async (valid) => {
-      //   // 用 async 简化 promise
-      //   if (!valid) return
-      //   // 解构赋值 data
-      //   const { data: res } = await this.$http.post('login', this.loginForm)
-      //   console.log(res.data)
-      //   if (res.meta.status !== 200) return this.$message.error('登录失败')
-      //   this.$message.success('登录成功')
-      //   // 1.将登录成功之后的 token，保存到客户端的 sessionStorage 中
-      //   //  1.1 项目中出了登录之外的其他 API 接口，必须在登录之后才能访问
-      //   //  1.2 token 只应在当前网站打开期间生效，所以将 token 保存在 sessionStorage 中
-      //   window.sessionStorage.setItem('token', res.data.token)
-      //   // 2. 通过编程式导航跳转到后台页面，路由地址是 /home
-      //   this.$router.push('/home')
-      // })
-      this.$message.success('登录成功')
-      this.$router.push('/home')
+      this.$refs.loginFormRef.validate(async (valid) => {
+        // 用 async 简化 promise
+        if (!valid) return
+        // 解构赋值 data
+        const { data } = await this.$http.post('login', this.loginForm)
+        console.log(data.err_code)
+        if (data.err_code !== 0) return this.$message.error('登录失败')
+        this.$message.success('登录成功')
+        // 1.将登录成功之后的 token，保存到客户端的 sessionStorage 中
+        //  1.1 项目中出了登录之外的其他 API 接口，必须在登录之后才能访问
+        //  1.2 token 只应在当前网站打开期间生效，所以将 token 保存在 sessionStorage 中
+        // window.sessionStorage.setItem('token', data.data.token)
+        // 2. 通过编程式导航跳转到后台页面，路由地址是 /home
+        this.$router.push('/home')
+      })
     }
   }
 }

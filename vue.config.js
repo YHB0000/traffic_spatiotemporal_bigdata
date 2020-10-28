@@ -7,14 +7,18 @@ module.exports = {
         .clear()
         .add('./src/main-prod.js')
 
+      // config.set('externals', {
+      //   vue: 'Vue',
+      //   'vue-router': 'VueRouter',
+      //   axios: 'axios',
+      //   lodash: '_',
+      //   // echarts: 'echarts',
+      //   // nprogrss: 'NProgress',
+      //   'vue-quil-editor': 'VueQuilEditor'
+      // })
+
       config.set('externals', {
-        vue: 'Vue',
-        'vue-router': 'VueRouter',
-        axios: 'axios',
-        lodash: '_',
-        // echarts: 'echarts',
-        // nprogrss: 'NProgress',
-        'vue-quil-editor': 'VueQuilEditor'
+        echarts: 'echarts'
       })
 
       config.plugin('html').tap(args => {
