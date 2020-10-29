@@ -167,7 +167,7 @@ export default {
       this.map = new AMap.Map('heatmap', {
         resizeEnable: true,
         mapStyle: 'amap://styles/grey',
-        zoom: 3,
+        zoom: 5,
         center: [122.8896332, 41.51470947]
       })
 
@@ -202,27 +202,28 @@ export default {
       this.clock = setInterval(async () => {
         // =============== 设置数据 ===============
         const { data } = await this.$http.post('heat')
-        console.log(data)
-
         this.layer.setData(data, {
           type: 'json',
           lnglat: 'lnglat',
           value: 'count'
         })
-
         // =============== 渲染 ===============
         this.layer.render()
-      }, 1500)
+      }, 1000)
     },
     // 清楚所有数据 销毁定时器
     clear () {
-      this.$refs.pro.innerHTML = ''
+      // this.$refs.pro.innerHTML = ''
       this.$refs.cit.innerHTML = ''
       this.$refs.dis.innerHTML = ''
       this.$refs.str.innerHTML = ''
-      // this.searchplace()
-      // this.map.setFitView()
-      this.data = []
+      this.map.setZoom(4)
+      this.layer.setData(this.data, {
+        type: 'json',
+        lnglat: 'lnglat',
+        value: 'count'
+      })
+      this.layer.render()
       window.clearInterval(this.clock)
     }
   }

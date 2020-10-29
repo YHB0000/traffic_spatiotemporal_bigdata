@@ -21,7 +21,7 @@
         <el-col :span="24">
           <div class="block">
             <el-date-picker v-model="value" type="datetimerange" :picker-options="pickerOptions" range-separator="—" start-placeholder="开始日期" end-placeholder="结束日期" align="center" format="yyyy-MM-dd HH:mm"
-              value-format="timestamp" :default-value="[new Date(2018, 10, 3, 0, 0), new Date(2018, 10, 3, 0, 0)]">
+              value-format="timestamp" :default-value="[new Date(2018, 9, 3, 0, 0), new Date(2018, 10, 4, 0, 0)]">
             </el-date-picker>
           </div>
         </el-col>
@@ -70,14 +70,17 @@ export default {
           }
         }]
       },
-      value: [new Date(2018, 10, 3, 0, 0), new Date(2018, 10, 3, 0, 0)],
+      // value: [new Date(2018, 10, 3, 0, 0), new Date(2018, 10, 3, 0, 0)],
+      value: [],
       place: '',
       map: {},
       layer: {},
       auto: {},
       placeSearch: {},
       data: [],
-      time: []
+      startTime: '',
+      endTime: '',
+      clock: {}
     }
   },
   mounted () {
@@ -96,9 +99,9 @@ export default {
 
       // =============== 创建图层 ===============
       this.layer = new Loca.HeatmapLayer({
-        map: this.map,
+        map: this.map
         // 设置缩放和中心自适应
-        fitView: true
+        // fitView: false
       })
 
       // =============== 样式配置 ===============
@@ -136,24 +139,42 @@ export default {
     },
     // 获取数据 渲染历史热力
     async setdata () {
-      // console.log(this.value[0], this.value[1])
-      this.time = await this.$http.post(`history/${this.value}`)
+      // 时间戳精度处理
+      this.startTime = this.value[0].toString()
+      this.endTime = this.value[1].toString()
+      this.startTime = this.startTime.substring(0, this.startTime.length - 3)
+      this.endTime = this.endTime.substring(0, this.endTime.length - 3)
       // =============== 设置数据 ===============
-      const { data } = await this.$http.post('history')
-
-      this.layer.setData(data, {
-        type: 'json',
-        lnglat: 'lnglat',
-        value: 'count'
-      })
-
+      const { data } = await this.$http.post(`history/${this.startTime}/${this.endTime}`)
+      var time = data.length
+      var item = 0
+      // eslint-disable-next-line no-unmodified-loop-condition
+      // for (var i = 0; i < time / 10; i + 1) {
+      //   data.slice(item, item + 10)
+      // }
       // =============== 渲染 ===============
-      this.layer.render()
+      this.clock = setInterval(() => {
+        this.layer.setData(data.slice(item, item + 10), {
+          type: 'json',
+          lnglat: 'lnglat',
+          value: 1
+        })
+        this.layer.render()
+        item = item + 10
+        // console.log(data.slice(item, item + 10))
+      }, 1000)
     },
     // 清除所有数据信息
     clear () {
       this.value = ''
       this.place = ''
+      window.clearInterval(this.clock)
+      this.layer.setData(this.data, {
+        type: 'json',
+        lnglat: 'lnglat',
+        value: 1
+      })
+      this.layer.render()
     }
   }
 }
