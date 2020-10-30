@@ -49,10 +49,10 @@ const router = new VueRouter({
 //   // next 是一个函数，表示放行
 //   //  next() 放行   next('./login') 强制跳转
 
-//   if (to.path === '/login') return next()
+//   // if (to.path === '/login') return next()
 //   // 获取 token
-//   const tokenStr = window.sessionStorage.getItem('token')
-//   if (!tokenStr) return next('/login')
+//   // const tokenStr = window.sessionStorage.getItem('token')
+//   // if (!tokenStr) return next('/login')
 //   next()
 // })
 

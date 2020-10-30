@@ -3,7 +3,7 @@
     <div class="login_box">
       <!-- 头像区域 -->
       <div class="avatar_box">
-        <img src="../assets/logo.png" alt="Vue" />
+        <img src="../assets/logo-p.png" alt="Vue" />
       </div>
       <!-- 登录表单区域 -->
       <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0px" class="login_form">
@@ -79,7 +79,10 @@ export default {
 // scopd 样式只在该组件有效
 <style lang="less" scoped>
 .login_container {
-  background-color: #2b4b6b;
+  background-color: #f1f3f7;
+  background-image: url('../assets/cool-background.svg');
+  background-repeat: no-repeat;
+  background-size: 105%;
   height: 100%;
 }
 

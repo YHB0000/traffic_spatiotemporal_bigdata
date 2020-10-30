@@ -11,7 +11,8 @@ module.exports = {
         vue: 'Vue',
         'vue-router': 'VueRouter',
         axios: 'axios',
-        echarts: 'echarts'
+        echarts: 'echarts',
+        nprogrss: 'NProgress'
       })
 
       config.plugin('html').tap(args => {
@@ -32,8 +33,8 @@ module.exports = {
         'vue-router': 'VueRouter',
         axios: 'axios',
         // lodash: '_',
-        echarts: 'echarts'
-        // nprogrss: 'NProgress',
+        echarts: 'echarts',
+        nprogrss: 'NProgress'
         // 'vue-quil-editor': 'VueQuilEditor'
       })
 
