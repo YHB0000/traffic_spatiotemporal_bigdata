@@ -7,17 +7,10 @@ module.exports = {
         .clear()
         .add('./src/main-prod.js')
 
-      // config.set('externals', {
-      //   vue: 'Vue',
-      //   'vue-router': 'VueRouter',
-      //   axios: 'axios',
-      //   lodash: '_',
-      //   // echarts: 'echarts',
-      //   // nprogrss: 'NProgress',
-      //   'vue-quil-editor': 'VueQuilEditor'
-      // })
-
       config.set('externals', {
+        vue: 'Vue',
+        'vue-router': 'VueRouter',
+        axios: 'axios',
         echarts: 'echarts'
       })
 
@@ -35,7 +28,13 @@ module.exports = {
         .add('./src/main-dev.js')
 
       config.set('externals', {
+        vue: 'Vue',
+        'vue-router': 'VueRouter',
+        axios: 'axios',
+        // lodash: '_',
         echarts: 'echarts'
+        // nprogrss: 'NProgress',
+        // 'vue-quil-editor': 'VueQuilEditor'
       })
 
       config.plugin('html').tap(args => {
@@ -43,5 +42,14 @@ module.exports = {
         return args
       })
     })
+  },
+  pwa: {
+    iconPaths: {
+      favicon32: 'bigdata_favicon.ico',
+      favicon16: 'bigdata_favicon.ico',
+      appleTouchIcon: 'bigdata_favicon.ico',
+      maskIcon: 'bigdata_favicon.ico',
+      msTileImage: 'bigdata_favicon.ico'
+    }
   }
 }
