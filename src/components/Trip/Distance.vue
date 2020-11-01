@@ -45,7 +45,7 @@ export default {
         },
         calculable: true,
         legend: {
-          data: ['步行', '自行车', '公交', '地铁', '私家车'],
+          data: ['步行', '自行车', '公交', '自驾车'],
           textStyle: {
             color: 'rgba(255, 255, 255, 0.9)'
           },
@@ -104,27 +104,22 @@ export default {
           {
             name: '步行',
             type: 'bar',
-            data: [24, 34, 90, 28, 34, 434, 144, 34, 94, 157]
+            data: []
           },
           {
             name: '自行车',
             type: 'bar',
-            data: [10, 130, 30, 118, 30, 130, 430, 100, 130, 160]
+            data: []
           },
           {
             name: '公交',
             type: 'bar',
-            data: [110, 230, 130, 110, 90, 130, 30, 100, 130, 100]
+            data: []
           },
           {
-            name: '地铁',
+            name: '自驾车',
             type: 'bar',
-            data: [180, 274, 130, 110, 230, 150, 430, 300, 130, 230]
-          },
-          {
-            name: '私家车',
-            type: 'bar',
-            data: [210, 430, 130, 210, 130, 170, 330, 107, 130, 120]
+            data: []
           }
         ]
       }
@@ -137,8 +132,40 @@ export default {
     this.resize()
   },
   methods: {
-    getdata () {
-
+    async getdata () {
+      const { data: walkdata } = await this.$http.post('mode/walk')
+      const { data: bickdata } = await this.$http.post('mode/bick')
+      const { data: busdata } = await this.$http.post('mode/bus')
+      const { data: cardata } = await this.$http.post('mode/car')
+      var walk = []
+      var bick = []
+      var bus = []
+      var car = []
+      for (let i = 0; i < 10; i++) {
+        walk.push(walkdata[i].number)
+        bick.push(bickdata[i].number)
+        bus.push(busdata[i].number)
+        car.push(cardata[i].number)
+      }
+      this.myChart.setOption({
+        series: [{
+          name: '步行',
+          type: 'bar',
+          data: walk
+        }, {
+          name: '自行车',
+          type: 'bar',
+          data: bick
+        }, {
+          name: '公交',
+          type: 'bar',
+          data: bus
+        }, {
+          name: '自驾车',
+          type: 'bar',
+          data: car
+        }]
+      })
     },
     resize () {
       window.onresize = this.myChart.resize
