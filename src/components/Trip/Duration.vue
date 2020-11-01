@@ -1,5 +1,5 @@
 <template>
-  <div id="tripdis" ref="dis"></div>
+  <div id="tripdur" ref="dur"></div>
 </template>
 
 <script>
@@ -69,7 +69,7 @@ export default {
         yAxis: [
           {
             type: 'value',
-            name: '距离 (km)',
+            name: '数量 (个)',
             splitLine: {
               show: true,
               lineStyle: {
@@ -131,7 +131,7 @@ export default {
     }
   },
   mounted () {
-    this.myChart = echarts.init(this.$refs.dis)
+    this.myChart = echarts.init(this.$refs.dur)
     this.getdata()
     this.myChart.setOption(this.option)
     this.resize()
@@ -152,7 +152,7 @@ export default {
 </script>
 
 <style scoped>
-#tripdis {
+#tripdur {
   width: 100%;
   height: 100%;
 }

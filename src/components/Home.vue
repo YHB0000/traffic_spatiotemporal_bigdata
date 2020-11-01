@@ -11,31 +11,31 @@
     <!-- 页面主体区域 -->
     <el-container>
       <!-- 侧边栏 -->
-        <el-aside :width="isCollapse ? '65px' : '200px'">
-          <div class="toggle-button" @click="toggleCollapse">|||</div>
-          <!-- 侧边栏菜单区 -->
-          <el-menu background-color="#2c303a" text-color="#fff" active-text-color="#0aafe6" unique-opened :collapse='isCollapse' :collapse-transition='false' router :default-active='activePath'>
-            <!-- 一级菜单 -->
-            <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
-              <!-- 一级菜单模板区 -->
+      <el-aside :width="isCollapse ? '65px' : '200px'">
+        <div class="toggle-button" @click="toggleCollapse">|||</div>
+        <!-- 侧边栏菜单区 -->
+        <el-menu background-color="#2c303a" text-color="#fff" active-text-color="#0aafe6" unique-opened :collapse='isCollapse' :collapse-transition='false' router :default-active='activePath'>
+          <!-- 一级菜单 -->
+          <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
+            <!-- 一级菜单模板区 -->
+            <template slot="title">
+              <!-- 图标 -->
+              <i :class="iconsObj[item.id]"></i>
+              <!-- 文本 -->
+              <span>{{item.authName}}</span>
+            </template>
+            <!-- 二级菜单 -->
+            <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id" @click="saveNavState('/' + subItem.path)">
               <template slot="title">
                 <!-- 图标 -->
-                <i :class="iconsObj[item.id]"></i>
+                <i class="el-icon-menu"></i>
                 <!-- 文本 -->
-                <span>{{item.authName}}</span>
+                <span>{{subItem.authName}}</span>
               </template>
-              <!-- 二级菜单 -->
-              <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id" @click="saveNavState('/' + subItem.path)">
-                <template slot="title">
-                  <!-- 图标 -->
-                  <i class="el-icon-menu"></i>
-                  <!-- 文本 -->
-                  <span>{{subItem.authName}}</span>
-                </template>
-              </el-menu-item>
-            </el-submenu>
-          </el-menu>
-        </el-aside>
+            </el-menu-item>
+          </el-submenu>
+        </el-menu>
+      </el-aside>
       <!-- 右侧内容主体 -->
       <el-main>
         <!-- 路由占位符 -->
@@ -173,13 +173,15 @@ export default {
     align-items: center;
     span {
       margin: 15px;
-      text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+      text-shadow: 0 0 20px rgba(10, 175, 230, 1),
+        0 0 20px rgba(10, 175, 230, 0);
     }
   }
 }
 
 .el-aside {
   background-color: #2c303a;
+  transition: all 0.1s linear;
   .el-menu {
     border-right: none;
   }

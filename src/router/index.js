@@ -17,6 +17,8 @@ const History = () => import(/* webpackChunkName: "Heat" */ '../components/Heat/
 const Mode = () => import(/* webpackChunkName: "Trip" */ '../components/Trip/Mode.vue')
 // import Distance from '../components/Trip/Distance.vue'
 const Distance = () => import(/* webpackChunkName: "Trip" */ '../components/Trip/Distance.vue')
+// import Duration from '../components/Trip/Duration.vue'
+const Duration = () => import(/* webpackChunkName: "Trip" */ '../components/Trip/Duration.vue')
 
 Vue.use(VueRouter)
 
@@ -32,8 +34,8 @@ const routes = [
       { path: '/show', component: Show },
       { path: '/history', component: History },
       { path: '/mode', component: Mode },
-      { path: '/distance', component: Distance }
-      // { path: '/reports', component: Report }
+      { path: '/distance', component: Distance },
+      { path: '/duration', component: Duration }
     ]
   }
 ]
